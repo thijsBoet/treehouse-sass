@@ -1,6 +1,4 @@
-
 /* BASE ------------------------------------------------- */
-
 * {
   box-sizing: border-box;
 }
@@ -9,14 +7,14 @@ body {
   color: #343434;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-align: center;
   margin: 0;
 }
 
 h1,
 h2 {
-  font-family: 'Bree Serif', serif;
+  font-family: "Bree Serif", serif;
 }
 
 ul {
@@ -26,11 +24,9 @@ ul {
 }
 
 /* HEADER & FOOTER ----------------------------------------- */
-
 header {
   height: 460px;
-  background: linear-gradient(#009fe1, #3acec2), 
-              url('../img/bg.jpg') no-repeat;
+  background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
 }
@@ -43,6 +39,7 @@ header h1 {
 }
 
 header p {
+  color: #eeea72;
   font-size: 1.25em;
   margin: 0;
 }
@@ -55,18 +52,16 @@ footer {
 }
 
 /* CONTAINERS ---------------------------------------------- */
-
 .inner {
   padding: 0.5em 1em;
 }
 
 .intro {
   margin: auto;
-  padding: 1em 1em 3em; 
+  padding: 1em 1em 3em;
 }
 
 /* COMPONENTS ----------------------------------------------- */
-
 .main-nav {
   margin-top: 1em;
 }
@@ -76,11 +71,11 @@ footer {
   flex-direction: column;
   padding: 1.5em 1em;
   border: 1px solid #eee;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .card h1 {
-  color: #278da4; 
+  color: #278da4;
   margin: 0.35em 0 0;
   line-height: 1.25;
 }
@@ -94,35 +89,34 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  background-color: #278da4;  
+  background-color: #278da4;
   margin-top: auto;
 }
 
-
 /* MEDIA QUERIES ------------------------------------------------- */
-
 @media (max-width: 575px) {
   header {
     height: 340px;
   }
+
   header h1 {
     font-size: 3.4em;
   }
+
   .img-featured {
     display: none;
   }
 }
-
 @media (min-width: 576px) {
   .main-content {
     display: flex;
     flex-wrap: wrap;
-  }  
+  }
+
   .card {
     flex: 1;
   }
 }
-
 @media (min-width: 768px) {
   .main-content {
     width: 90%;
@@ -130,12 +124,14 @@ footer {
     margin: 0 auto;
   }
 }
-
 @media (min-width: 992px) {
   header {
     background-position: 0 0, 0 45%;
   }
+
   .intro {
     width: 45%;
   }
 }
+
+/*# sourceMappingURL=input.css.map */
