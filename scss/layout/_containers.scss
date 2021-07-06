@@ -4,10 +4,9 @@
 
 // Main content
 .main-content {
-  display: flex;
-  flex-wrap: wrap;
-  @media (min-width: $break-m) {
-    @include center;
+  @include flexy($wrap: wrap);
+  @include mq (m) {
+    @include center(90%);
   }
 }  
 
@@ -25,7 +24,7 @@
   p {
     font-size: 1.2em; 
   } 
-  @media (min-width: $break-l) {
+  @include mq (l) {
     width: 45%;
   }
 }

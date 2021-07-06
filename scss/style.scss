@@ -24,6 +24,16 @@
         'components/icons',
         'components/images';
 
+@for $i from 1 through 1000 {
+    .box-#{i} {
+        background-color: adjust-hue(tomato, $i * 20);
+    }
+}
 
+$teachers: ('a', 'b', 'c', 'd', 'e');
 
-
+@each $teacher in $teachers {
+    .teachers-#{$teacher} {
+        background-image: url('img/#{$teacher}.jpg');
+    }
+}

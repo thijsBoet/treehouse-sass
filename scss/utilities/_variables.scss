@@ -30,8 +30,18 @@ $break-s: 576px;
 $break-m: 768px;
 $break-l: 992px;
 
+$breakpoints: (
+    'xs': 575px,
+    's': 576px,
+    'm': 768px,
+    'l': 992px,
+);
 
-
-
-
-
+$themes: (
+    'ent': #79ccf5,
+    'arch': #fd6fa6,
+    'edu': #23bbae,
+    'sim': #2377bb,
+    'soc': #ada3f0,
+    'games': #3cb144,
+)

@@ -17,9 +17,61 @@
 }
 
 // Center containers
-@mixin center {
-  width: 90%;
+@mixin center ($w) {
+  width: $w;
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Rounded element
+@mixin roundy($dim, $brdr: null) {
+  width: $dim;
+  height: $dim;
+  border: $brdr;
+  border-radius: 50%;
+}
+
+// Create flex containers
+@mixin flexy($disp: flex, 
+  $dir: null, 
+  $wrap:null, 
+  $just: null){
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// Media Query
+@mixin mq($break) {
+  @if $break == $break-xs {
+    @media(max-width: map-get($breakpoints, 'xs')) {
+      @content;
+    }
+  }
+  @else if $break == $break-s {
+    @media(min-width: map-get($breakpoints, 's')) {
+      @content;
+    }
+  }
+  @else if $break == $break-m {
+    @media(min-width: map-get($breakpoints, 'm')) {
+      @content;
+    }
+  }
+  @else if $break == $break-l {
+    @media(min-width: map-get($breakpoints, 'l')) {
+      @content;
+    }
+  }
+}
+
+// Colors
+@mixin themes($map) {
+  @each $theme, $color in $map {
+    &-#{$theme} {
+      color: $color;
+    }
+  }
 }
